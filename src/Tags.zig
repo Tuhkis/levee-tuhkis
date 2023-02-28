@@ -25,9 +25,18 @@ pub fn create(monitor: *Monitor) !*Tags {
 
     self.monitor = monitor;
     self.output_status = try manager.getRiverOutputStatus(monitor.output);
-    for (self.tags) |*tag, i| {
-        tag.label = '1' + @intCast(u8, i);
-    }
+    // for (self.tags) |*tag, i| {
+    //     tag.label = '1' + @intCast(u8, i);
+    // }
+    tags[0].label = " "
+    tags[1].label = " "
+    tags[2].label = " "
+    tags[3].label = " "
+    tags[4].label = "󱐡 "
+    tags[5].label = " "
+    tags[6].label = " "
+    tags[7].label = " "
+    tags[8].label = " "
 
     self.output_status.setListener(*Tags, outputStatusListener, self);
     return self;
