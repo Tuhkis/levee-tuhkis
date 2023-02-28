@@ -29,6 +29,7 @@ riverctl spawn "levee pulse backlight battery"
 * [pixman] 0.42.0
 * [fcft] 3.1.5
 * [libpulse] 16.0
+* [FiraCode Nerd Font]
 
 ## Contributing
 
@@ -49,3 +50,4 @@ or learn about it by following this excellent [tutorial].
 [issue tracker]: https://todo.sr.ht/~andreafeletto/levee
 [web interface]: https://git.sr.ht/~andreafeletto/levee/send-email
 [tutorial]: https://git-send-email.io
+[FiraCode Nerd Font]: https://www.nerdfonts.com/font-downloads
