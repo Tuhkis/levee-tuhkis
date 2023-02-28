@@ -1,12 +1,11 @@
-
-# [levee]
-
-[![builds.sr.ht status](https://builds.sr.ht/~andreafeletto/levee/commits/main.svg)](https://builds.sr.ht/~andreafeletto/levee/commits/main)
+For original levee look in [here](https://sr.ht/~andreafeletto/levee/)
+# levee-tuhkis
 
 levee is a statusbar for the [river] wayland compositor, written in [zig]
 without any UI toolkit. It currently provides full support for workspace tags
 and displays pulseaudio volume, battery capacity and screen brightness.
-
+<br>
+Uses the FiraCode Nerd Font for the icons in the bar.
 ## Build
 
 ```
@@ -39,7 +38,6 @@ You are welcome to send patches to the [mailing list] or report bugs on the
 If you aren't familiar with `git send-email`, you can use the [web interface]
 or learn about it by following this excellent [tutorial].
 
-[levee]: https://sr.ht/~andreafeletto/levee
 [river]: https://github.com/riverwm/river/
 [zig]: https://ziglang.org/
 [wayland]: https://wayland.freedesktop.org/
