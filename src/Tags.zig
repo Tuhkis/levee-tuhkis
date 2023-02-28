@@ -14,7 +14,7 @@ output_status: *zriver.OutputStatusV1,
 tags: [9]Tag,
 
 pub const Tag = struct {
-    label: u8,
+    label: u21,
     focused: bool = false,
     occupied: bool = false,
 };
@@ -28,15 +28,15 @@ pub fn create(monitor: *Monitor) !*Tags {
     // for (self.tags) |*tag, i| {
     //     tag.label = '1' + @intCast(u8, i);
     // }
-    self.tags[0].label = " ";
-    self.tags[1].label = " ";
-    self.tags[2].label = " ";
-    self.tags[3].label = " ";
-    self.tags[4].label = "󱐡 ";
-    self.tags[5].label = " ";
-    self.tags[6].label = " ";
-    self.tags[7].label = " ";
-    self.tags[8].label = " ";
+    self.tags[0].label = '';
+    self.tags[1].label = '';
+    self.tags[2].label = '';
+    self.tags[3].label = '';
+    self.tags[4].label = '󱐡';
+    self.tags[5].label = '';
+    self.tags[6].label = '';
+    self.tags[7].label = '';
+    self.tags[8].label = '';
 
     self.output_status.setListener(*Tags, outputStatusListener, self);
     return self;
