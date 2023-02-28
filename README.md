@@ -9,7 +9,7 @@ Uses the FiraCode Nerd Font for the icons in the bar.
 ## Build
 
 ```
-git clone --recurse-submodules https://git.sr.ht/~andreafeletto/levee
+git clone --recurse-submodules https://github.com/Tuhkis/levee-tuhkis.git
 cd levee
 zig build --prefix ~/.local install
 ```
