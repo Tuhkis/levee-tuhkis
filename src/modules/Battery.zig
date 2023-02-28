@@ -65,13 +65,13 @@ pub fn print(self: *Battery, writer: anytype) !void {
     try updateDevices(state.gpa, self.context, &self.devices);
     const device = self.devices.items[0];
 
-    var icon: []const u8 = "❓";
+    var icon: []const u8 = " ";
     if (mem.eql(u8, device.status, "Discharging")) {
-        icon = "🔋";
+        icon = "󱟤";
     } else if (mem.eql(u8, device.status, "Charging")) {
-        icon = "🔌";
+        icon = "󱟦";
     } else if (mem.eql(u8, device.status, "Full")) {
-        icon = "⚡";
+        icon = "󱟢";
     }
 
     try fmt.format(writer, "{s}   {d}%", .{ icon, device.capacity });

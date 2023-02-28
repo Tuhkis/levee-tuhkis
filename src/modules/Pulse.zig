@@ -88,9 +88,9 @@ pub fn refresh(self: *Pulse) !void {
 
 pub fn print(self: *Pulse, writer: anytype) !void {
     if (self.muted) {
-        try writer.print("   🔇   ", .{});
+        try writer.print("      ", .{});
     } else {
-        try writer.print("🔊   {d}%", .{self.volume});
+        try writer.print("   {d}%", .{self.volume});
     }
 }
 

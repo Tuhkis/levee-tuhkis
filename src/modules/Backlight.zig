@@ -73,7 +73,7 @@ pub fn print(self: *Backlight, writer: anytype) !void {
     percent /= @intToFloat(f64, device.max);
     const value = @floatToInt(u8, @round(percent));
 
-    try writer.print("💡   {d}%", .{value});
+    try writer.print("󰖨   {d}%", .{value});
 }
 
 fn updateDevices(
