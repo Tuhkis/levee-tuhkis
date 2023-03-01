@@ -185,8 +185,8 @@ fn renderTag(
         .{
             .x = offset + 2,
             .y = 2,
-            .width = 2 * border,
-            .height = 2 * border,
+            .width = border,
+            .height = border,
         },
     };
     

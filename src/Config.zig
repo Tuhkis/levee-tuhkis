@@ -27,7 +27,7 @@ pub fn init() !Config {
             .blue = 0xffff,
             .alpha = 0xffff,
         },
-        .border = 2,
+        .border = 5,
         .font = try fcft.Font.fromName(&font_names, null),
         .clockFormat = "%d %b %Y - %R",
     };
