@@ -173,7 +173,7 @@ fn renderTag(
     const outer = [_]pixman.Rectangle16{
         .{ .x = offset, .y = 0, .width = size, .height = size },
     };
-    const outer_color = if (tag.focused or tag.occupied) blk: {
+    const outer_color = if (tag.focused) blk: {
         break :blk &state.config.foregroundColor;
     } else blk: {
         break :blk &state.config.backgroundColor;
@@ -181,17 +181,19 @@ fn renderTag(
     _ = pixman.Image.fillRectangles(.over, pix, outer_color, 1, &outer);
 
     const border = state.config.border;
-    const inner = [_]pixman.Rectangle16{
+    const occupied_rect = [_]pixman.Rectangle16{
         .{
-            .x = offset + border,
-            .y = border,
-            .width = size - 2 * border,
-            .height = size - 2 * border,
+            .x = offset + 2,
+            .y = 2,
+            .width = 2 * border,
+            .height = 2 * border,
         },
     };
-    const inner_color = &state.config.backgroundColor;
+    
+    const occupied_colour = &state.config.foregroundColor;
+    
     if (!tag.focused and tag.occupied) {
-        _ = pixman.Image.fillRectangles(.over, pix, inner_color, 1, &inner);
+        _ = pixman.Image.fillRectangles(.over, pix, occupied_colour, 1, &occupied_rect);
     }
 
     const glyph_color = if (tag.focused) blk: {
