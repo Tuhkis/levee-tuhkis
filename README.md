@@ -10,9 +10,10 @@ Uses the FiraCode Nerd Font for the icons in the bar.
 
 ```
 git clone --recurse-submodules https://github.com/Tuhkis/levee-tuhkis.git
-cd levee
-zig build --prefix ~/.local install
+cd levee-tuhkis
+zig build
 ```
+Then copy `zig-out/bin/levee` to `/usr/bin/` or somewhere else in the `PATH`.
 
 ## Usage
 
